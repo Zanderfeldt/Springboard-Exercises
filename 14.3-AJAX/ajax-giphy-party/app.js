@@ -18,7 +18,7 @@ $('form').on('submit', async function(e) {
       }
     }
   );
-  // console.log(res);
+  console.log(res);
   appendGif(res.data)
 });
 
@@ -29,9 +29,13 @@ function appendGif(res) {
     const randomIndex = Math.floor(Math.random() * results);
     const $newContainer = $('<div>', {class : 'container'});
     const $newGif = $('<img>', {
-      src : res.data[randomIndex].url,
+      src : res.data[randomIndex].images.original.url,
       class : 'gif'
     });
     $gifArea.append($newContainer.append($newGif));
   }
 }
+
+$('#rmv').on('click', function() {
+  $gifArea.empty();
+});
