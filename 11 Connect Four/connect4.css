@@ -1,0 +1,85 @@
+/* game board table */
+h1 {
+  position: relative;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: lighter;
+  letter-spacing: 5px;
+  color: white;
+  background: rgb(255,0,0);
+  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(9,9,121,1) 70%, rgba(7,0,255,1) 100%);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#board {
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#board td {
+  width: 50px;
+  height: 50px;
+  border: solid 1px #666;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  margin: 5px;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/*  make pieces red/blue,  depending on player 1/2 piece */
+.p1 {
+  background-color: red;
+}
+
+.p2 {
+  background-color: blue;
+}
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dashed 1px lightgray;
+}
+
+#column-top td:hover {
+  background-color: gold;
+}
+
+
+#player {
+  text-align: center;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  border-radius: 10px;
+  width: 400px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px;
+  
+}
+
+.turn0 {
+  background-color: red;
+  /* border-style: solid; */
+  /* border-color: rgb(66, 64, 64); */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.turn1 {
+  background-color: red;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.turn2 {
+  background-color: blue;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
