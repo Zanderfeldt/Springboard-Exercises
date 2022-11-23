@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Forms</title>
+</head>
+
+<body>
+  <h1>Logo Creator!</h1>
+  <form id="logo-form">
+    <p>
+      <label> Your Brand Name:
+        <input type="text" name="brandname">
+      </label>
+    </p>
+    <p>
+      <label> Your Brand Color:
+        <input type="color" name="color">
+      </label>
+    </p>
+    <p>
+      <label> Logo Font Size:
+        <input type="range" min="10" max="200" name="fontsize">
+      </label>
+    </p>
+
+    <button>Submit</button>
+  </form>
+  <section id="results"></section>
+  <script src="app.js"></script>
+</body>
+
+</html>

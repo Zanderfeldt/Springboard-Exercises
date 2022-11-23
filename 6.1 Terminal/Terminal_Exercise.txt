@@ -1,0 +1,60 @@
+PART 1
+
+xela@DESKTOP-EFA2FBU:~$ mkdir first
+xela@DESKTOP-EFA2FBU:~$ ls
+first  Test
+xela@DESKTOP-EFA2FBU:~$ cd first
+xela@DESKTOP-EFA2FBU:~/first$ touch person.txt
+xela@DESKTOP-EFA2FBU:~/first$ ls
+person.txt
+xela@DESKTOP-EFA2FBU:~/first$ mv person.txt another.txt
+xela@DESKTOP-EFA2FBU:~/first$ ls
+another.txt
+xela@DESKTOP-EFA2FBU:~/first$ cp another.txt copy.txt
+xela@DESKTOP-EFA2FBU:~/first$ ls
+another.txt  copy.txt
+xela@DESKTOP-EFA2FBU:~/first$ rm copy.txt
+xela@DESKTOP-EFA2FBU:~/first$ ls
+another.txt
+xela@DESKTOP-EFA2FBU:~/first$ cd ..
+xela@DESKTOP-EFA2FBU:~$ cp -r first second
+xela@DESKTOP-EFA2FBU:~$ ls
+first  second  Test
+xela@DESKTOP-EFA2FBU:~$ rm -rf second
+xela@DESKTOP-EFA2FBU:~$ ls
+first  Test
+xela@DESKTOP-EFA2FBU:~$
+
+PART 2
+
+1. man shows the manual for the terminal command that follows it, providing additional information. 
+Man rm would show the manual for the move command. 
+To scroll, you use the arrows keys. To exit, you press the 'q' key
+
+2. The -l flag in regards to ls would list the content of your current directory but with additional
+information, like creation date. The -a command shows all hidden files.
+
+3. ALT + LEFT OR RIGHT ARRROW
+
+4. CTRL + e 
+
+5. CTRL + a
+
+6. CTRL + w
+
+7. The shell is the program that processes commands and returns an output,
+while the terminal is the overarching program that runs the shell.
+
+8. An absolute path is that path to a certain file/folder starting at the root directory (the full address).
+
+9. A relative path would be one that does not containa full address from the root file, but is instead a level up or down from 
+where you currently are. This path would only require the name of the location you are pathing into (with cd or cd ..).
+
+10. Flags are single, double, (or sometimes triple) letter addages that are placed after
+a command to change or enhance a command. For example, the -a flag would enable display of hidden files,
+the -l flag enables long list format (showing a more detailed version of the list), and the -r flag reverses
+the order of items displayed in the list.
+
+11. In regards to the rm (remove) command, the -r flag removes directories and their contents recursively,
+and the -f flag forces a comman by ignoring arguments. Combining both would force the removal of a directory 
+and all its contents. 

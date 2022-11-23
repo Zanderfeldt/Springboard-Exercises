@@ -1,0 +1,17 @@
+1. xela@DESKTOP-EFA2FBU:~$ mkdir learn_git_again
+2. xela@DESKTOP-EFA2FBU:~$ cd learn_git_again
+3. xela@DESKTOP-EFA2FBU:~/learn_git_again$ touch third.txt
+4. xela@DESKTOP-EFA2FBU:~/learn_git_again$ git init
+5. xela@DESKTOP-EFA2FBU:~/learn_git_again$ git add third.txt
+6. xela@DESKTOP-EFA2FBU:~/learn_git_again$ git commit -m "adding third.txt"
+7. xela@DESKTOP-EFA2FBU:~/learn_git_again$ git log
+8. xela@DESKTOP-EFA2FBU:~/learn_git_again$ touch fourth.txt
+9. xela@DESKTOP-EFA2FBU:~/learn_git_again$ git add fourth.txt
+10. xela@DESKTOP-EFA2FBU:~/learn_git_again$ git commit -m "adding fourth.txt"
+11. xela@DESKTOP-EFA2FBU:~/learn_git_again$ rm third.txt
+12. xela@DESKTOP-EFA2FBU:~/learn_git_again$ git add third.txt
+13. xela@DESKTOP-EFA2FBU:~/learn_git_again$ git commit -m "removing third.txt"
+14. xela@DESKTOP-EFA2FBU:~/learn_git_again$ git log
+15. xela@DESKTOP-EFA2FBU:~/learn_git_again$ git config --global core.pager 'cat'
+16. xela@DESKTOP-EFA2FBU:~/learn_git_again$ git config --global --list
+core.pager=cat

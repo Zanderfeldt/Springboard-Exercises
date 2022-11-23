@@ -1,0 +1,22 @@
+.todo {
+  font-size: 40px;
+  color: purple;
+}
+
+.todo:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: all 200ms;
+}
+
+.completed {
+  color: gray;
+  text-decoration: line-through;
+}
+
+#main-heading {
+  font-size: 80px;
+}
+
+.thumbnail {
+  width: 200px;
+}

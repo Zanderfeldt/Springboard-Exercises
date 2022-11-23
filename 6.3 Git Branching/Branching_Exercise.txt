@@ -1,0 +1,19 @@
+I
+
+1. git branch -b
+
+2. Fast forward merge is the most simplie of merges, where git
+is esily able to detect a set of commits, and put one on top of the
+other chronologically. A recursive merge happens when there are many different
+commits happening at different times on different branches. When attempting to merge,
+the git is unable to detect the order of changes chronologically, so the user is prompted
+to decide which changes are kept and which are deleted in the merge.
+
+3. git checkout
+
+4. git branch -D
+
+5. Merge conflicts happen when there are multiple commits with changes to the same
+file, so Git doesn't know which file to merge/ which changes to apply. 
+
+

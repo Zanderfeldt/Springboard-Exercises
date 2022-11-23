@@ -1,0 +1,18 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
+h1 {
+  font-size: 15rem;
+  font-family: Silkscreen;
+  letter-spacing: -1cm;
+  font-weight: lighter;
+}
+
+.letter {
+  transition: color 1000ms;
+}
