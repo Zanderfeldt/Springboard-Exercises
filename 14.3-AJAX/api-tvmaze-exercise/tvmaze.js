@@ -11,7 +11,7 @@ const $searchForm = $("#search-form");
 async function getShowsByTerm(term) {
   // make request to TVMaze search shows API.
   const res = await axios.get(`https://api.tvmaze.com/search/shows?q=${term}`);
-
+  console.log(res)
   // Returns (promise) array of show objects: [show, show, ...]
   let shows = res.data.map(function(result){
     let show = result.show;
