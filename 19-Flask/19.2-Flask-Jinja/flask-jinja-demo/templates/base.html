@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}TITLE GOES HERE{% endblock %}</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <script src="http://unpkg.com/jquery"></script>
+</head>
+<body>
+  <h1>Our Site</h1>
+  {% block content %}BODY CONTENT GOES HERE{% endblock %}
+  <footer>Copyright by Whiskey.</footer>
+</body>
+</html>

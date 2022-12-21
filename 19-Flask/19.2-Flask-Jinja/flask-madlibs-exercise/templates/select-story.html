@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>MadLibs</h1>
+  <form action="/questions">
+    <select name="story_id">
+        {% for story in stories %}
+        <option value="{{story.code}}">
+            {{story.title}}
+        </option>
+        {% endfor %}
+    </select>
+    <button>GO</button>
+  </form>
+{% endblock %}
