@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <h1>Retrieving From Session</h1>
+    {# Show lucky number and nickname  #}
+    {# Notice we can get things directly from session! #}
+    <p>
+      I still remember about {{ session['lucky_number'] }},
+      {{ nickname }}.
+    </p>
+
+    {% include "state-debug.html" %}
+  </body>
+</html>

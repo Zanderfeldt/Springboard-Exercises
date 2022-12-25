@@ -1,0 +1,32 @@
+<html>
+	<head>
+	<link rel="stylesheet" href="https://bootswatch.com/4/united/bootstrap.min.css">
+
+	</head>
+	<body>
+		<div class="navbar navbar-dark bg-primary">
+			<div class="navbar-brand">Auth Demo</div>
+			<div class="navbar-text">
+				{% if current_user.is_authenticated %}
+					{{ current_user.username }} |
+					<a href="{{ url_for('logout') }}">Logout</a>
+				{% else %}
+				  <a href="{{ url_for('register') }}">Register</a> |				
+					<a href="{{ url_for('login') }}">Login</a>
+				{% endif %}
+			</div>
+		</div>  <!-- end of navbar -->
+
+		<div class="container" style="margin-top: 2em">
+			{% for msg in get_flashed_messages() %}
+			   <div class="alert alert-primary" role="alert">
+					 {{ msg}}
+				 </div>
+			{% endfor %}
+
+			{% block content %}
+			{% endblock %}
+		</div>
+	
+	</body>
+</html>

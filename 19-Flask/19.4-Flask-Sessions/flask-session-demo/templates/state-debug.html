@@ -1,0 +1,37 @@
+<style>
+  body {
+    font-family: sans-serif;
+  }
+
+  fieldset {
+    margin-top: 1em;
+    margin-bottom: 1em
+  }
+
+  fieldset label {
+    font-weight: bold;
+  }
+</style>
+
+{# For demo purposes, show our cookies #}
+{% if request.cookies %}
+  <fieldset>
+    <label>Cookies Received By Flask</label>
+    <ul>
+      {% for name, value in request.cookies.items() %}
+        <li>{{ name }} = "{{ value }}"</li>
+      {% endfor %}
+    </ul>
+  </fieldset>
+{% endif %}
+
+{# For demo purposes, show our sessions #}
+{% if session %}
+  <fieldset>
+    <label>Flask Session</label>
+    {{ session }}
+  </fieldset>
+{% endif %}
+
+<hr>
+<p><a href="/">Back to Home</a></p>

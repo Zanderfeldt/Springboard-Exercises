@@ -1,0 +1,15 @@
+<html>
+
+<body>
+  <h1>Setting Session</h1>
+  <p>
+    Hey, {{ session['nickname'] }}, {{ session['lucky_number'] }} is my lucky
+    number, too!
+  </p>
+
+  <a href="/later-session">Visit a new page.</a>
+
+  {% include "state-debug.html" %}
+</body>
+
+</html>
