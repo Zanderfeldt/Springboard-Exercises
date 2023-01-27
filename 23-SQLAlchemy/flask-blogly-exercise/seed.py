@@ -1,4 +1,4 @@
-from models import User, db
+from models import User, Post, db
 from app import app
 
 db.drop_all()
@@ -13,5 +13,11 @@ jane = User(first_name='Jane', last_name='Smith')
 db.session.add(alan)
 db.session.add(joel)
 db.session.add(jane)
+
+db.session.commit()
+
+alan_post = Post(title='Hi', content='testtesttesttest', user=alan)
+
+db.session.add(alan)
 
 db.session.commit()
