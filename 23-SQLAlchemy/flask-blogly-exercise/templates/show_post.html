@@ -9,6 +9,15 @@
 <p><i>By {{ post.user.first_name }} {{ post.user.last_name }}
   on {{ post.nice_date }}
 </i></p>
+
+{% if post.tags %}
+<p>
+  <b>Tags:</b>
+  {% for tag in post.tags %}
+  <a href="/tags/{{ tag.id }}"><i>{{ tag.name }}</i></a>
+  {% endfor %}
+</p>
+{% endif %}
 <a href="/posts/{{post.id}}/edit">Edit</a>
 <form action="/posts/{{post.id}}/delete" method="POST">
 <button>Delete</button>

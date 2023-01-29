@@ -7,11 +7,15 @@
 
 <form action="/posts/{{post.id}}/edit" method="POST">
   <label for="title">Title</label>
-  <input type="text" id="title" name="title" placeholder="{{post.title}}">
+  <input type="text" id="title" name="title" placeholder="{{post.title}}" value="{{ post.title }}">
   <label for="content">Post Content</label>
   <input type="text" id="content" name="content" placeholder="{{post.content}}">
+  {% for tag in tags %}
+  <input type="checkbox" value="{{ tag.id }}" id="tag_{{ tag.id }}" {% if tag in post.tags %}checked{% endif %} name="tags">
+  <label for="tag_{{ tag.id }}">{{ tag.name }}</label>
+  {% endfor %}
   <button>Edit</button>
-  <a href="/posts/{{post.id}}">Cancel</a>
+  <a href="/users/{{ post.user_id }}">Cancel</a>
 </form>
 
 
