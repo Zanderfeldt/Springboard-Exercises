@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>New Employee</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="display-1 text-center">Add New Employee</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <!-- {{form.name.label(class_="text-info")}}
+        {{form.name(class_="form-control form-control-lg")}}
+        {{form.state.label(class_="text-danger")}}
+        {{form.state(class_="form-control")}} -->
+        <form method="POST">
+          {{ form.hidden_tag() }}
+
+          {% for field in form if field.widget.input_type != 'hidden'%}
+          <div class="form-group">
+            {{field.label}}
+            {{field(class_="form-control")}}
+            {% for err in field.errors %}
+            <small class="form-text text-danger">
+              {{err}}
+            </small>
+            {% endfor %}
+          </div>
+          {% endfor %}
+          <button class="btn  btn-success  btn-lg">Submit</button>
+          <a href="/phones" class="btn btn-danger btn-lg">Go Back</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

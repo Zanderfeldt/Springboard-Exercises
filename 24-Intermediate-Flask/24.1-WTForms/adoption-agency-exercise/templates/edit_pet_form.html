@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %} Edit Pet Form {% endblock %}
+
+{% block content %}
+<h1 class="text-center">Edit Pet</h1>
+
+
+  
+<div class="form-container">
+  <div class="row justify-content-md-center">
+  <div class="col-sm-3">
+    <img class="img-thumbnail rounded mx-auto d-block" src="{{ pet.photo_url }}" alt="">
+  </div>
+  <form action="/{{ pet.id }}" method="POST">
+  {{ form.hidden_tag() }}
+  {% for field in form if field.widget.input_type != 'hidden' %}
+  <div class="form-group">
+    {{ field.label }}
+    {{ field(class_="form-control") }}
+    {% for err in field.errors %}
+    <small>
+      {{ err }}
+    </small>
+    {% endfor %}
+  </div>
+  {% endfor %}
+  <button>Submit</button>
+  <a href="/">Go Back</a>
+  </form> 
+</div>
+</div>
+
+{% endblock %} 
