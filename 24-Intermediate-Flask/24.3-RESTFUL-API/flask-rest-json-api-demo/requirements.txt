@@ -1,0 +1,4 @@
+Flask
+Flask-SQLAlchemy
+Flaks-DebugToolbar
+psycopg2-binary
