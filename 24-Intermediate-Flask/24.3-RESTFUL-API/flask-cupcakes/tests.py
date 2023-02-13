@@ -2,7 +2,8 @@ from unittest import TestCase
 
 from app import app
 from models import db, Cupcake
-
+import pdb
+pdb.set_trace()
 # Use test database and don't clutter tests with SQL
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///cupcakes_test'
 app.config['SQLALCHEMY_ECHO'] = False
